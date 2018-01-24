@@ -1,0 +1,1 @@
+MSH|^~\&|||||20160301172537.864-0600||MDM^T02|64|P|2.3EVN|T02|201603011725PID|1||492874088||daniels^harry^||19620612|FPV1|1|O|Medical records department^37^38TXA|1|CN|TX|20150610172537||||||||DOC-ID-10001|||||AU||AVOBX|1|TX|1001^Reason For Visit: |1|The patient complained of high_blood_pressure. Recommended adjustments. ||||||F

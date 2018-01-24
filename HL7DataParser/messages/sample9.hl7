@@ -1,0 +1,6 @@
+MSH|^~\&|||||20160229002413.415-0500||MDM^T02|7|P|2.3
+EVN|T02|201602290024
+PID|1||599992601||cunningham^beatrice^||19290611|F
+PV1|1|O|Burn center^60^71
+TXA|1|CN|TX|20150211002413||||||||DOC-ID-10001|||||AU||AV
+OBX|1|TX|1001^Reason For Visit: |1|Evaluated patient for skin_scaling. ||||||F
