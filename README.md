@@ -65,11 +65,12 @@ You will need to create those tables in HBase. Following are the DDL's I used us
 
 
 Create a kafka topic:
-                kafka-topics.sh --zookeeper localhost:2181   --alter --topic hl7-messages --config retention.ms=1000
+
+        kafka-topics.sh --zookeeper localhost:2181   --alter --topic hl7-messages --config retention.ms=1000
 
 Before you start the Spark streaming program, you'll need to makes sure to have all the dependencies and hbase jars in the classpath. Like this: 
 
-                spark-submit  --class poc.SparkStreamingTest2 —conf "spark.executor.extraJavaOptions=-Dsun.io.serialization.extendedDebugInfo=true" —master yarn-cluster --files=/usr/hdp/current/hive/conf/hive-site.xml,/usr/hdp/current/hbase/conf/hbase-site.xml, --jars /usr/hdp/current/hbase/lib/hbase-server.jar,/usr/hdp/current/hbase/lib/hbase-client-1.1.2 .current.jar,/usr/hdp/current/hbase/lib/hbase-common-1.1.2.current.jar,/usr/hdp/current/hbase/lib/hbase-protocol-1.1.2.current.jar,/usr/hdp/current/phoenix/lib/phoenix-core-4.4.0.current.jar,/usr/hdp/current/phoenix/lib/phoenix-spark-4.4.0.current.jar,/usr/hdp/current/spark/lib/datanucleus-rdbms-3.2.9.jar,/usr/hdp/current/spark/lib/datanucleus-core-3.2.10.jar,/usr/hdp/current/spark/lib/datanucleus-api-jdo-3.2.6.jar,/usr/hdp/current/hive/lib/hive-exec-1.2.1000.current.jar /hl7Spark/Spark-POC-0.0.2.jar hdfs:///user/spark/sparkJobJsonInput localhost:2181:/hbase-unsecure 15
+        spark-submit  --class poc.SparkStreamingTest2 —conf "spark.executor.extraJavaOptions=-Dsun.io.serialization.extendedDebugInfo=true" —master yarn-cluster --files=/usr/hdp/current/hive/conf/hive-site.xml,/usr/hdp/current/hbase/conf/hbase-site.xml, --jars /usr/hdp/current/hbase/lib/hbase-server.jar,/usr/hdp/current/hbase/lib/hbase-client-1.1.2 .current.jar,/usr/hdp/current/hbase/lib/hbase-common-1.1.2.current.jar,/usr/hdp/current/hbase/lib/hbase-protocol-1.1.2.current.jar,/usr/hdp/current/phoenix/lib/phoenix-core-4.4.0.current.jar,/usr/hdp/current/phoenix/lib/phoenix-spark-4.4.0.current.jar,/usr/hdp/current/spark/lib/datanucleus-rdbms-3.2.9.jar,/usr/hdp/current/spark/lib/datanucleus-core-3.2.10.jar,/usr/hdp/current/spark/lib/datanucleus-api-jdo-3.2.6.jar,/usr/hdp/current/hive/lib/hive-exec-1.2.1000.current.jar /hl7Spark/Spark-POC-0.0.2.jar hdfs:///user/spark/sparkJobJsonInput localhost:2181:/hbase-unsecure 15
 
 
 
